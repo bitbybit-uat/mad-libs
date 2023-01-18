@@ -1,11 +1,20 @@
 import sys
 import time
 
+# sequential print function
+def sprint(string, wait):
+    wait = float(wait)
+    for char in string:
+        print(char, end='')
+        sys.stdout.flush()
+        time.sleep(wait)
+
 def main():
     noun = ''
     verb = ''
     person = ''
-    
+    sprint("test string", 0.2)
+
     input('Welcome to Mad-Libs! Press \'Enter\' to continue. . .')
     noun = input('Please enter a noun:   ')
     verb = input('Please enter a verb:   ')
